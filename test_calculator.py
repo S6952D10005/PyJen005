@@ -16,6 +16,9 @@ class TestAdd(unittest.TestCase):
     def test_add_float(self):
         self.assertAlmostEqual(add(1.5, 2.25), 3.75)
 
+    def test_add_large_numbers(self):
+        self.assertEqual(add(1000000, 2000000), 3000000)
+
     def test_main_with_args(self):
         self.assertEqual(main(["8", "12"]), 20)
 
